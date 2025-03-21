@@ -6,6 +6,61 @@
     text-decoration: none;
     list-style: none;
 }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+.header,
+.home,
+.about,
+.projects,
+.education-container,
+.contact-form,
+.footer {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+.header {
+    animation-delay: 0.2s;
+}
+
+.home {
+    animation-delay: 0.4s;
+}
+
+.about {
+    animation-delay: 0.6s;
+}
+
+.projects {
+    animation-delay: 0.8s;
+}
+
+.education-container {
+    animation-delay: 1s;
+}
+
+.contact-form {
+    animation-delay: 1.2s;
+}
+
+.footer {
+    animation-delay: 1.4s;
+}
+
+
 
 .header{
     position: fixed;
@@ -20,6 +75,42 @@
     align-items: center;
     z-index: 100;
 }
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: white;
+    max-width: 600px;
+}
+
+.about-content h2 {
+    font-size: 42px;
+    color: white;
+    text-align: center;
+}
+
+.about-content h3 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-content a.btn-2 {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: orangered;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.about-content a.btn-2:hover {
+    background-color: white;
+    color: orangered;
+    box-shadow: 0 0 10px orangered;
+}
+
 
 .logo{
     font-size: 25px;
@@ -342,20 +433,28 @@ span{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    text-align: center;
+    padding: 50px 10px;
 }
 
-.education-box {
+.education-container .heading {
+    font-size: 42px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.education-container .education-box {
     width: 60%;
-    padding: 15px;
-    background-color: #f4f4f4;
-    border-left: 5px solid #007bff;
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    border-left: 5px solid orangered;
     border-radius: 5px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
-html {
-    scroll-behavior: smooth;
-}
+
 
 
 
